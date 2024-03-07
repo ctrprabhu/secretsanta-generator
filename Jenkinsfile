@@ -24,7 +24,7 @@ pipeline {
         stage('Sonarqube-Analysis') {
             steps {
                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://192.168.122.145:9000/ -Dsonar.login=squ_0c57b5162c85c51570b4e0142581d6ab5259b6c9 -Dsonar.projectName=secret-santa \
-               -Dsonar.java.binaries= . \
+               -Dsonar.java.binaries=. \
                -Dsonar.projectkey=secret-santa '''
             }
         }
